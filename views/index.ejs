@@ -1,0 +1,28 @@
+<!-- header  -->
+<%- include("layout/header") %>
+
+    <main>
+
+        <form action="/" method="post">
+            <input type="text" placeholder="type here" name="plang">
+            <button type="submit">Add</button>
+        </form>
+        <ul>
+            <% if(progName.length > 0){ %>
+
+
+                <% for(let x=0; x < progName.length; x++) { %>
+                    <li>
+                        <%= progName[x] %>
+                    </li>
+                    <% } %>
+
+                        <% } else { %>
+                            <p>No Data Found!</p>
+                            <% } %>
+        </ul>
+    </main>
+
+    <!-- footer ejs -->
+
+    <%- include("layout/footer") %>
